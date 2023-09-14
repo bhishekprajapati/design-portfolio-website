@@ -1,0 +1,17 @@
+{
+  "name": "design-portflio-website",
+  "version": "1.0.0",
+  "description": "Single page design portfolio website",
+  "main": "index.js",
+  "author": "Abhishek Prajapati",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "4.4.9"
+  }
+}
