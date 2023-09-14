@@ -1,21 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <title>Home | Single-page design portfolio</title>
   </head>
-  <body>
-    Free Consultation Design solutions made easy With over ten years of
-    experience in various design disciplines, I’m your one-stop shop for your
-    design needs. Graphic Design UI/UX Apps Photography Illustrations Motion
-    Graphics I’m Amy, and I’d love to work on your next project I love working
-    with others to create beautiful design solutions. I’ve designed everything
-    from brand illustrations to complete mobile apps. I’m also handy with a
-    camera! Free Consultation My Work Book a call with me I’d love to have a
-    chat to see how I can help you. The best first step is for us to discuss
-    your project during a free consultation. Then we can move forward from
-    there. Free Consultation Free Consultation
+  <body
+    class="bg-light-cream text-medium-brown mx-auto max-w-[90rem] text-lg font-medium"
+  >
+    <header
+      class="flex justify-between p-4 pb-8 md:p-9 md:pb-16 lg:pb-[4.12rem] lg:pt-9 xl:px-[10.31%]"
+    >
+      <span>
+        <img
+          src="./assets/logo.svg"
+          class="h-12 w-12 md:h-16 md:w-16"
+          alt="brand-logo"
+        />
+      </span>
+      <button type="button" class="bttn bttn-black">Free Consultation</button>
+    </header>
+
+    <main>
+      <section class="px-1 pb-8 text-center xl:px-[10.31%]">
+        <h1
+          class="heading-sm px-6 pb-4 text-[2.25rem] md:pb-7 md:text-[2.75rem] lg:pb-6 lg:text-[3.5rem] lg:leading-[4.375rem]"
+        >
+          Design solutions made easy
+        </h1>
+        <p class="mx-auto w-[80%] pb-8 md:px-2 lg:w-[65%]">
+          With over ten years of experience in various design disciplines, I’m
+          your one-stop shop for your design needs.
+        </p>
+      </section>
+
+      <section class="px-4 md:px-10 xl:px-[10.31%]">
+        <ul class="block xl:flex xl:gap-x-6 [&_li]:block">
+          <div class="mb-6 md:flex md:gap-x-6 xl:flex-[0.7]">
+            <li class="mb-6 md:mb-0 md:flex-1">
+              <a href="#" class="block">
+                <article class="category-card bg-galactic-blue">
+                  <img
+                    class="category-card-img mb-[5.68rem]"
+                    src="./assets/pattern-graphic-design.svg"
+                    alt=""
+                  />
+                  <span
+                    ><strong class="category-card-title"
+                      >Graphic Design</strong
+                    ></span
+                  >
+                </article>
+              </a>
+            </li>
+
+            <div class="md:flex-1">
+              <div class="mb-6 flex gap-x-6">
+                <li class="flex-1">
+                  <a href="#" class="block">
+                    <article class="category-card bg-summer-yellow">
+                      <img
+                        class="category-card-img mb-10"
+                        src="./assets/pattern-ui-ux.svg"
+                        alt=""
+                      />
+                      <span
+                        ><strong class="category-card-title"
+                          >UI/UX</strong
+                        ></span
+                      >
+                    </article>
+                  </a>
+                </li>
+                <li class="flex-1">
+                  <a href="#" class="block">
+                    <article class="category-card bg-pink">
+                      <img
+                        class="category-card-img mb-10"
+                        src="./assets/pattern-apps.svg"
+                        alt=""
+                      />
+                      <span
+                        ><strong class="category-card-title">Apps</strong></span
+                      >
+                    </article>
+                  </a>
+                </li>
+              </div>
+              <li>
+                <a href="#" class="block">
+                  <article class="category-card bg-light-red">
+                    <img
+                      class="category-card-img mb-2"
+                      src="./assets/pattern-illustrations.svg"
+                      alt=""
+                    />
+                    <span
+                      ><strong class="category-card-title"
+                        >Illustrations</strong
+                      ></span
+                    >
+                  </article>
+                </a>
+              </li>
+            </div>
+          </div>
+
+          <div
+            class="self-start md:flex md:gap-x-6 xl:flex-[0.3] xl:flex-col xl:gap-x-0 xl:gap-y-6"
+          >
+            <li class="mb-6 md:mb-0 md:flex-1">
+              <a href="#" class="block">
+                <article class="category-card bg-cyan">
+                  <img
+                    class="category-card-img mb-4"
+                    src="./assets/pattern-photography.svg"
+                    alt=""
+                  />
+                  <span
+                    ><strong class="category-card-title"
+                      >Photography</strong
+                    ></span
+                  >
+                </article>
+              </a>
+            </li>
+            <li class="md:flex-1">
+              <a href="#" class="block">
+                <article class="category-card bg-dark-purple">
+                  <img
+                    class="category-card-img mb-4"
+                    src="./assets/pattern-motion-graphics.svg"
+                    alt=""
+                  />
+                  <span
+                    ><strong class="category-card-title"
+                      >Motion Graphics</strong
+                    ></span
+                  >
+                </article>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </section>
+    </main>
+
+    <footer
+      class="px-4 pb-8 pt-[6.25rem] md:px-10 md:pb-14 md:pt-[7.25rem] xl:px-[10.31%]"
+    >
+      <div
+        class="mb-10 rounded-xl bg-black px-6 py-12 text-center md:p-16 xl:flex xl:gap-x-[18%]"
+      >
+        <div class="xl:flex-1 xl:text-left">
+          <h5
+            class="heading-sm text-light-cream mb-6 text-[1.65rem] md:text-[2rem]"
+          >
+            Book a call with me
+          </h5>
+          <p class="text-light-cream mb-6 text-[1rem] md:text-[1.25rem]">
+            I’d love to have a chat to see how I can help you. The best first
+            step is for us to discuss your project during a free consultation.
+            Then we can move forward from there.
+          </p>
+        </div>
+        <div class="pt-[5%]">
+          <button type="button" class="bttn bttn-light-red">
+            Free Consultation
+          </button>
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <span>
+          <img
+            src="./assets/logo.svg"
+            class="h-12 w-12 md:h-16 md:w-16"
+            alt="brand-logo"
+          />
+        </span>
+        <button type="button" class="bttn bttn-black">Free Consultation</button>
+      </div>
+    </footer>
   </body>
 </html>
