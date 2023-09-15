@@ -19,18 +19,18 @@
 
 @layer components {
   .bttn {
-    @apply text-light-cream rounded-[2rem] px-[1.7rem] py-[0.5rem] font-sans text-sm font-bold leading-7;
+    @apply rounded-[2rem] px-[1.7rem] py-[0.5rem] font-sans text-sm font-bold leading-7 text-light-cream;
     @apply md:text-[1rem];
     @apply xl:px-[2.81rem] xl:py-[0.88rem] xl:text-lg;
     @apply transition-colors duration-200 ease-in-out;
   }
 
   .bttn-black {
-    @apply hover:bg-galactic-blue bg-black;
+    @apply bg-black hover:bg-galactic-blue;
   }
 
   .bttn-light-red {
-    @apply hover:bg-summer-yellow bg-light-red;
+    @apply bg-light-red hover:bg-summer-yellow;
   }
 
   .bttn-arrow {
@@ -41,7 +41,8 @@
 
 @layer components {
   .category-card {
-    @apply rounded-lg p-6;
+    @apply rounded-lg p-6 transition-all duration-700;
+    @apply hover:-translate-y-2 hover:scale-[1.01] hover:shadow-2xl;
   }
 
   .category-card-img {
@@ -49,6 +50,6 @@
   }
 
   .category-card-title {
-    @apply text-light-cream text-2xl;
+    @apply text-2xl text-light-cream;
   }
 }
