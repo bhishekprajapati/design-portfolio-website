@@ -41,8 +41,8 @@
 
 @layer components {
   .category-card {
-    @apply rounded-lg p-6 transition-all duration-700;
-    @apply hover:-translate-y-2 hover:scale-[1.01] hover:shadow-2xl;
+    @apply rounded-lg p-6 transition-all duration-500;
+    @apply hover:-translate-y-2 hover:-rotate-1 hover:scale-[1.01] hover:shadow-2xl;
   }
 
   .category-card-img {
