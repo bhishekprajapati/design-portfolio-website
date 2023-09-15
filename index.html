@@ -11,214 +11,112 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="./index.js"></script>
     <title>Home | Single-page design portfolio</title>
   </head>
   <body
     class="mx-auto max-w-[90rem] bg-light-cream text-lg font-medium text-medium-brown"
   >
-    <header
-      class="flex justify-between p-4 pb-8 md:p-9 md:pb-16 lg:pb-[4.12rem] lg:pt-9 xl:px-[10.31%]"
-    >
-      <span>
-        <img
-          src="./assets/logo.svg"
-          class="h-12 w-12 md:h-16 md:w-16"
-          alt="brand-logo"
-        />
-      </span>
-      <button type="button" class="bttn bttn-black">Free Consultation</button>
-    </header>
+    <div id="app">
+      <page-layout>
+        <template v-slot:header>
+          <app-nav></app-nav>
+        </template>
 
-    <main>
-      <section class="px-1 pb-8 text-center xl:px-[10.31%]">
-        <h1
-          class="heading-sm px-6 pb-4 text-[2.25rem] md:pb-7 md:text-[2.75rem] lg:pb-6 lg:text-[3.5rem] lg:leading-[4.375rem]"
-        >
-          Design solutions made easy
-        </h1>
-        <p class="mx-auto w-[80%] pb-8 md:px-2 lg:w-[65%]">
-          With over ten years of experience in various design disciplines, I’m
-          your one-stop shop for your design needs.
-        </p>
-      </section>
+        <template v-slot:hero>
+          <hero-section></hero-section>
+        </template>
 
-      <section class="mb-[6.25rem] px-4 md:px-10 xl:px-[10.31%]">
-        <ul class="block xl:flex xl:gap-x-6 [&_li]:block">
-          <div class="mb-6 md:flex md:gap-x-6 xl:flex-[0.7]">
-            <li class="mb-6 md:mb-0 md:flex-1">
-              <a href="#" class="block">
-                <article class="category-card bg-galactic-blue">
-                  <img
-                    class="category-card-img mb-[5.68rem]"
+        <template v-slot:categories>
+          <ul class="block xl:flex xl:gap-x-6 [&_li]:block">
+            <div class="mb-6 md:flex md:gap-x-6 xl:flex-[0.7]">
+              <li class="mb-6 md:mb-0 md:flex-1">
+                <a href="#" class="block">
+                  <category-card
+                    class="bg-galactic-blue"
+                    title="Graphic Design"
                     src="./assets/pattern-graphic-design.svg"
-                    alt=""
+                    img-styles="mb-[5.68rem]"
                   />
-                  <span
-                    ><strong class="category-card-title"
-                      >Graphic Design</strong
-                    ></span
-                  >
-                </article>
-              </a>
-            </li>
+                </a>
+              </li>
 
-            <div class="md:flex-1">
-              <div class="mb-6 flex gap-x-6">
-                <li class="flex-1">
-                  <a href="#" class="block">
-                    <article class="category-card bg-summer-yellow">
-                      <img
-                        class="category-card-img mb-10"
+              <div class="md:flex-1">
+                <div class="mb-6 flex gap-x-6">
+                  <li class="flex-1">
+                    <a href="#" class="block">
+                      <category-card
+                        class="bg-summer-yellow"
+                        title="UI/UX"
                         src="./assets/pattern-ui-ux.svg"
-                        alt=""
+                        img-styles="mb-10"
                       />
-                      <span
-                        ><strong class="category-card-title"
-                          >UI/UX</strong
-                        ></span
-                      >
-                    </article>
-                  </a>
-                </li>
-                <li class="flex-1">
-                  <a href="#" class="block">
-                    <article class="category-card bg-pink">
-                      <img
-                        class="category-card-img mb-10"
+                    </a>
+                  </li>
+                  <li class="flex-1">
+                    <a href="#" class="block">
+                      <category-card
+                        class="bg-pink"
+                        title="Apps"
                         src="./assets/pattern-apps.svg"
-                        alt=""
+                        img-styles="mb-10"
                       />
-                      <span
-                        ><strong class="category-card-title">Apps</strong></span
-                      >
-                    </article>
+                    </a>
+                  </li>
+                </div>
+                <li>
+                  <a href="#" class="block">
+                    <category-card
+                      class="bg-light-red"
+                      title="Illustrations"
+                      src="./assets/pattern-illustrations.svg"
+                      img-styles="mb-2"
+                    />
                   </a>
                 </li>
               </div>
-              <li>
+            </div>
+
+            <div
+              class="self-start md:flex md:gap-x-6 xl:flex-[0.3] xl:flex-col xl:gap-x-0 xl:gap-y-6"
+            >
+              <li class="mb-6 md:mb-0 md:flex-1">
                 <a href="#" class="block">
-                  <article class="category-card bg-light-red">
-                    <img
-                      class="category-card-img mb-2"
-                      src="./assets/pattern-illustrations.svg"
-                      alt=""
-                    />
-                    <span
-                      ><strong class="category-card-title"
-                        >Illustrations</strong
-                      ></span
-                    >
-                  </article>
+                  <category-card
+                    class="bg-cyan"
+                    title="Photography"
+                    src="./assets/pattern-photography.svg"
+                    img-styles="mb-4"
+                  />
+                </a>
+              </li>
+              <li class="md:flex-1">
+                <a href="#" class="block">
+                  <category-card
+                    class="bg-dark-purple"
+                    title="Motion Graphics"
+                    src="./assets/pattern-motion-graphics.svg"
+                    img-styles="mb-4"
+                  />
                 </a>
               </li>
             </div>
-          </div>
+          </ul>
+        </template>
 
-          <div
-            class="self-start md:flex md:gap-x-6 xl:flex-[0.3] xl:flex-col xl:gap-x-0 xl:gap-y-6"
-          >
-            <li class="mb-6 md:mb-0 md:flex-1">
-              <a href="#" class="block">
-                <article class="category-card bg-cyan">
-                  <img
-                    class="category-card-img mb-4"
-                    src="./assets/pattern-photography.svg"
-                    alt=""
-                  />
-                  <span
-                    ><strong class="category-card-title"
-                      >Photography</strong
-                    ></span
-                  >
-                </article>
-              </a>
-            </li>
-            <li class="md:flex-1">
-              <a href="#" class="block">
-                <article class="category-card bg-dark-purple">
-                  <img
-                    class="category-card-img mb-4"
-                    src="./assets/pattern-motion-graphics.svg"
-                    alt=""
-                  />
-                  <span
-                    ><strong class="category-card-title"
-                      >Motion Graphics</strong
-                    ></span
-                  >
-                </article>
-              </a>
-            </li>
-          </div>
-        </ul>
-      </section>
+        <template v-slot:intro>
+          <intro-section></intro-section>
+        </template>
 
-      <section class="px-4 md:px-10 xl:px-[10.31%]">
-        <div
-          class="items-center md:m-auto md:flex md:max-w-[64rem] md:max-w-none md:gap-x-20 xl:justify-start"
-        >
-          <div class="mb-10 block md:mb-0 md:flex-1">
-            <img
-              class="xl:h-[26rem] xl:w-[26rem]"
-              src="./assets/image-amy.webp"
-              alt="image"
-            />
-          </div>
-          <div class="md:flex-1">
-            <div class="text-center md:text-left">
-              <h2
-                class="mb-6 text-[1.625rem] font-bold text-black md:text-[2rem] md:leading-9 xl:text-[2.25rem] xl:leading-normal"
-              >
-                I’m Amy, and I’d love to work on your next project
-              </h2>
-              <p class="mb-6">
-                I love working with others to create beautiful design solutions.
-                I’ve designed everything from brand illustrations to complete
-                mobile apps. I’m also handy with a camera!
-              </p>
-              <button type="button" class="bttn bttn-light-red">
-                Free Consultation
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+        <template v-slot:cta>
+          <cta-section></cta-section>
+        </template>
 
-    <footer
-      class="px-4 pb-8 pt-[6.25rem] md:px-10 md:pb-14 md:pt-[7.25rem] xl:px-[10.31%]"
-    >
-      <div
-        class="mb-10 rounded-xl bg-black px-6 py-12 text-center md:p-16 xl:flex xl:gap-x-[18%]"
-      >
-        <div class="xl:flex-1 xl:text-left">
-          <h5
-            class="heading-sm mb-6 text-[1.65rem] text-light-cream md:text-[2rem]"
-          >
-            Book a call with me
-          </h5>
-          <p class="mb-6 text-[1rem] text-light-cream md:text-[1.25rem]">
-            I’d love to have a chat to see how I can help you. The best first
-            step is for us to discuss your project during a free consultation.
-            Then we can move forward from there.
-          </p>
-        </div>
-        <div class="pt-[5%]">
-          <button type="button" class="bttn bttn-light-red">
-            Free Consultation
-          </button>
-        </div>
-      </div>
-      <div class="flex justify-between">
-        <span>
-          <img
-            src="./assets/logo.svg"
-            class="h-12 w-12 md:h-16 md:w-16"
-            alt="brand-logo"
-          />
-        </span>
-        <button type="button" class="bttn bttn-black">Free Consultation</button>
-      </div>
-    </footer>
+        <template v-slot:footer>
+          <app-nav></app-nav>
+        </template>
+      </page-layout>
+    </div>
   </body>
 </html>
