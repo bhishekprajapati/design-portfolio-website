@@ -16,107 +16,112 @@
     <title>Home | Single-page design portfolio</title>
   </head>
   <body
-    class="scrollbar-thumb-galactic-blue scrollbar-thin mx-auto max-w-[90rem] scroll-smooth bg-light-cream text-lg font-medium text-medium-brown"
+    class="mx-auto max-w-[90rem] scroll-smooth bg-light-cream text-lg font-medium text-medium-brown scrollbar-thin scrollbar-thumb-galactic-blue"
   >
     <div id="app">
-      <page-layout>
-        <template v-slot:header>
-          <app-nav></app-nav>
-        </template>
+      <smooth-page-scroll
+        scroller-viewport-id="viewport"
+        scroller-container-id="container"
+      >
+        <page-layout>
+          <template v-slot:header>
+            <app-nav></app-nav>
+          </template>
 
-        <template v-slot:hero>
-          <hero-section></hero-section>
-        </template>
+          <template v-slot:hero>
+            <hero-section></hero-section>
+          </template>
 
-        <template v-slot:categories>
-          <ul class="block xl:flex xl:gap-x-6 [&_li]:block">
-            <div class="mb-6 md:flex md:gap-x-6 xl:flex-[0.7]">
-              <li class="mb-6 md:mb-0 md:flex-1">
-                <a href="#" class="block">
-                  <category-card
-                    class="bg-galactic-blue"
-                    title="Graphic Design"
-                    src="./assets/pattern-graphic-design.svg"
-                    img-styles="mb-[5.68rem]"
-                  />
-                </a>
-              </li>
+          <template v-slot:categories>
+            <ul class="block xl:flex xl:gap-x-6 [&_li]:block">
+              <div class="mb-6 md:flex md:gap-x-6 xl:flex-[0.7]">
+                <li class="mb-6 md:mb-0 md:flex-1">
+                  <a href="#" class="block">
+                    <category-card
+                      class="bg-galactic-blue"
+                      title="Graphic Design"
+                      src="./assets/pattern-graphic-design.svg"
+                      img-styles="mb-[5.68rem]"
+                    />
+                  </a>
+                </li>
 
-              <div class="md:flex-1">
-                <div class="mb-6 flex gap-x-6">
-                  <li class="flex-1">
+                <div class="md:flex-1">
+                  <div class="mb-6 flex gap-x-6">
+                    <li class="flex-1">
+                      <a href="#" class="block">
+                        <category-card
+                          class="bg-summer-yellow"
+                          title="UI/UX"
+                          src="./assets/pattern-ui-ux.svg"
+                          img-styles="mb-10"
+                        />
+                      </a>
+                    </li>
+                    <li class="flex-1">
+                      <a href="#" class="block">
+                        <category-card
+                          class="bg-pink"
+                          title="Apps"
+                          src="./assets/pattern-apps.svg"
+                          img-styles="mb-10"
+                        />
+                      </a>
+                    </li>
+                  </div>
+                  <li>
                     <a href="#" class="block">
                       <category-card
-                        class="bg-summer-yellow"
-                        title="UI/UX"
-                        src="./assets/pattern-ui-ux.svg"
-                        img-styles="mb-10"
-                      />
-                    </a>
-                  </li>
-                  <li class="flex-1">
-                    <a href="#" class="block">
-                      <category-card
-                        class="bg-pink"
-                        title="Apps"
-                        src="./assets/pattern-apps.svg"
-                        img-styles="mb-10"
+                        class="bg-light-red"
+                        title="Illustrations"
+                        src="./assets/pattern-illustrations.svg"
+                        img-styles="mb-2"
                       />
                     </a>
                   </li>
                 </div>
-                <li>
+              </div>
+
+              <div
+                class="self-start md:flex md:gap-x-6 xl:flex-[0.3] xl:flex-col xl:gap-x-0 xl:gap-y-6"
+              >
+                <li class="mb-6 md:mb-0 md:flex-1">
                   <a href="#" class="block">
                     <category-card
-                      class="bg-light-red"
-                      title="Illustrations"
-                      src="./assets/pattern-illustrations.svg"
-                      img-styles="mb-2"
+                      class="bg-cyan"
+                      title="Photography"
+                      src="./assets/pattern-photography.svg"
+                      img-styles="mb-4"
+                    />
+                  </a>
+                </li>
+                <li class="md:flex-1">
+                  <a href="#" class="block">
+                    <category-card
+                      class="bg-dark-purple"
+                      title="Motion Graphics"
+                      src="./assets/pattern-motion-graphics.svg"
+                      img-styles="mb-4"
                     />
                   </a>
                 </li>
               </div>
-            </div>
+            </ul>
+          </template>
 
-            <div
-              class="self-start md:flex md:gap-x-6 xl:flex-[0.3] xl:flex-col xl:gap-x-0 xl:gap-y-6"
-            >
-              <li class="mb-6 md:mb-0 md:flex-1">
-                <a href="#" class="block">
-                  <category-card
-                    class="bg-cyan"
-                    title="Photography"
-                    src="./assets/pattern-photography.svg"
-                    img-styles="mb-4"
-                  />
-                </a>
-              </li>
-              <li class="md:flex-1">
-                <a href="#" class="block">
-                  <category-card
-                    class="bg-dark-purple"
-                    title="Motion Graphics"
-                    src="./assets/pattern-motion-graphics.svg"
-                    img-styles="mb-4"
-                  />
-                </a>
-              </li>
-            </div>
-          </ul>
-        </template>
+          <template v-slot:intro>
+            <intro-section></intro-section>
+          </template>
 
-        <template v-slot:intro>
-          <intro-section></intro-section>
-        </template>
+          <template v-slot:cta>
+            <cta-section></cta-section>
+          </template>
 
-        <template v-slot:cta>
-          <cta-section></cta-section>
-        </template>
-
-        <template v-slot:footer>
-          <app-nav></app-nav>
-        </template>
-      </page-layout>
+          <template v-slot:footer>
+            <app-nav></app-nav>
+          </template>
+        </page-layout>
+      </smooth-page-scroll>
     </div>
   </body>
 </html>
