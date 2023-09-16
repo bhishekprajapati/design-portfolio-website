@@ -10,10 +10,10 @@ export default {
     };
   },
   template: `
-    <h1 class="heading-sm px-6 pb-4 text-[2.25rem] md:pb-7 md:text-[2.75rem] lg:pb-6 lg:text-[3.5rem] lg:leading-[4.375rem]">
+    <h1 data-scroll data-scroll-speed="3" class="heading-sm px-6 pt-12 xl:pt-20 text-[2.25rem]  md:text-[2.75rem] lg:text-[3.5rem] lg:leading-[4.375rem]">
       {{ title }}
     </h1>
-    <p class="mx-auto w-[80%] pb-8 md:px-2 lg:w-[65%]">
+    <p data-scroll data-scroll-speed="2" data-scroll-class="opacity-100" class="mx-auto w-[80%] pb-8 opacity-0 transition-opacity duration-[4s] md:px-2 lg:w-[65%]">
       {{ description }}
     </p>
   `,

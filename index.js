@@ -16,6 +16,9 @@ const app = createApp({
     const scroller = new LocomotiveScroll({
       el,
       smooth: true,
+      smartphone: {
+        smooth: true,
+      },
     });
     new ResizeObserver(() => scroller.update()).observe(el);
   },
