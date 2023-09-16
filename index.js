@@ -6,13 +6,20 @@ import SectionHero from "./components/SectionHero";
 import SectionIntro from "./components/SectionIntro";
 import CardCategory from "./components/CardCategory";
 import ButtonPrimary from "./components/ButtonPrimary";
-import SmoothPageScroll from "./components/SmoothPageScroll";
+
+import LocomotiveScroll from "locomotive-scroll";
 
 const { createApp, ref } = Vue;
-const app = createApp();
-
-// for page effects
-app.component("smooth-page-scroll", SmoothPageScroll);
+const app = createApp({
+  mounted() {
+    const el = document.querySelector("[data-scroll-container]");
+    const scroller = new LocomotiveScroll({
+      el,
+      smooth: true,
+    });
+    new ResizeObserver(() => scroller.update()).observe(el);
+  },
+});
 
 // register layouts
 app.component("page-layout", PageLayout);

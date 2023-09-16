@@ -18,4 +18,11 @@ module.exports = {
     },
   },
   plugins: [require("tailwind-scrollbar")],
+  safelist: [
+    "html.has-scroll-smooth",
+    "html.has-scroll-dragging",
+    `[data-scroll-direction="horizontal"]`,
+    ".c-scrollbar",
+    ".c-scrollbar_thumb",
+  ],
 };

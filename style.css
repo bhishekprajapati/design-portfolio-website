@@ -1,3 +1,5 @@
+@import url("./node_modules/locomotive-scroll/dist/locomotive-scroll.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -40,9 +42,12 @@
 }
 
 @layer components {
-  .category-card {
-    @apply rounded-lg p-6 transition-all duration-500;
+  .card-hover-transition {
+    @apply transition-all duration-500;
     @apply hover:-translate-y-2 hover:-rotate-1 hover:scale-[1.01] hover:shadow-2xl;
+  }
+  .category-card {
+    @apply card-hover-transition rounded-lg p-6;
   }
 
   .category-card-img {
