@@ -31,7 +31,9 @@ export default {
           <p class="mb-6 leading-loose opacity-0 transition-opacity duration-[4s]" data-scroll data-scroll-speed="1" data-scroll-class="opacity-100" data-scroll-repeat="true">
             {{ description }}
           </p>
-          <button-primary class="bttn-light-red opacity-0 transition-opacity duration-[4s]" data-scroll data-scroll-speed="1.5" data-scroll-class="opacity-100" data-scroll-repeat="true">
+          <button-primary
+            data-scroll-id="intro-section-bttn" data-scroll-call="changeBodyBgc"
+            class="bttn-light-red opacity-0 transition-opacity duration-[4s]" data-scroll data-scroll-speed="1.5" data-scroll-class="opacity-100" data-scroll-repeat="true">
             Free Consultation
           </button-primary>
         </div>

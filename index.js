@@ -21,6 +21,17 @@ const app = createApp({
       },
     });
     new ResizeObserver(() => scroller.update()).observe(el);
+    scroller.on("scroll", (args) => {
+      if (!args?.currentElements?.["intro-section-bttn"]?.inView) {
+        document.body.style.backgroundColor = null;
+      }
+    });
+
+    scroller.on("call", (name) => {
+      if (name === "changeBodyBgc") {
+        document.body.style.backgroundColor = "#f2e6ff";
+      }
+    });
   },
 });
 
