@@ -28,7 +28,7 @@ export default {
           >
             {{ title }}
           </h2>
-          <p class="mb-6 leading-loose opacity-0 transition-opacity duration-[4s]" data-scroll data-scroll-speed="1" data-scroll-class="opacity-100" data-scroll-repeat="true">
+          <p class="mb-6 leading-loose opacity-0 transition-opacity duration-[2s]" data-scroll data-scroll-speed="1" data-scroll-class="opacity-100" data-scroll-repeat="true">
             {{ description }}
           </p>
           <button-primary
