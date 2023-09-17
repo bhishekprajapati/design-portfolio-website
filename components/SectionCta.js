@@ -6,7 +6,7 @@ export default {
           <h5 class="heading-sm text-[1.65rem] text-light-cream md:text-[2rem]">
             Book a call with me
           </h5>
-          <p class="text-[1rem] text-light-cream md:text-[1.25rem] hidden">
+          <p class="text-[1rem] text-light-cream md:text-[1.25rem]">
             I’d love to have a chat to see how I can help you. The best first
             step is for us to discuss your project during a free consultation.
             Then we can move forward from there.
