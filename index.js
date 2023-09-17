@@ -29,7 +29,7 @@ const app = createApp({
 
     scroller.on("call", (name) => {
       if (name === "changeBodyBgc") {
-        document.body.style.backgroundColor = "#f2e6ff";
+        document.body.style.backgroundColor = "rgb(230 251 255)";
       }
     });
   },
