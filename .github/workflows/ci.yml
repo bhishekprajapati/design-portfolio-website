@@ -1,35 +1,32 @@
- name: build the website
+name: build the website
 
- on:
-   push:
-     branches: ["main"]
+on:
+  push:
+    branches: ["main"]
 
- jobs: 
-   build:
-     runs-on: ubuntu-latest
-     steps:
-       - name: Checkout code
-         uses: actions/checkout@v4
-         
-       - name: Setup Node
-         uses: actions/setup-node@v3
-         with: 
-           node-version: 20
-           cache: "yarn"
-       - name: Install dependencies
-         run: yarn
-         
-       - name: start build
-         run: yarn build
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-       - name: 🚀 Deploy website
-         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-         with:
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: "yarn"
+      - name: Install dependencies
+        run: yarn
+
+      - name: start build
+        run: yarn build
+
+      - name: 🚀 Deploy website
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
           server: ftp.abhishekprajapati.com
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
           server-dir: /
           local-dir: ./dist/
-           
-        
-       
