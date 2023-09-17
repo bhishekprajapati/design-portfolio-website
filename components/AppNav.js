@@ -6,7 +6,7 @@ export default {
       <div class="flex justify-between">
       <span>
         <img
-          src="./assets/logo.svg"
+          src="/assets/logo.svg"
           class="h-12 w-12 md:h-16 md:w-16"
           alt="brand-logo"
         />

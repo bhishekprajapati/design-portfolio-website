@@ -16,7 +16,7 @@ export default {
           data-scroll data-scroll-speed="1.8"
           data-scroll-class="opacity-100" data-scroll-repeat="true"
           class="xl:h-[26rem] xl:w-[26rem] opacity-0 transition-opacity duration-[2s]"
-          src="./assets/image-amy.webp"
+          src="/assets/image-amy.webp"
           alt="image"
         />
       </div>
