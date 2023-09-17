@@ -4,6 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes animate-linear-gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.bg-gradient-animation {
+  background-size: 200%;
+  animation: animate-linear-gradient 3s ease infinite;
+}
+
 @layer components {
   .heading {
     @apply font-bold text-black;
