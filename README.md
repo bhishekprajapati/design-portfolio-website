@@ -1,3 +1,3 @@
-# Preview
+# Website Preview
 
-![Preview](https://abhishekprajapati.com/preview/design-portfolio-website)
+![Preview](https://design-portfolio.abhishekprajapati.com/preview/design-portfolio-website)
